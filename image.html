@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <title>Flag</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'flag', { preload: preload, create: create,});
+
+function preload() {
+
+    // loading the imgae
+    game.load.image('sky', 'asset/sky.png');
+
+}
+function create() {
+	//adding as sprite
+	game.add.sprite(0, 0, 'sky');
+}
+</script>
+
+</body>
+</html>

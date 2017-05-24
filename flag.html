@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <title>Flag</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'flag', {preload: preload, create: create,  render: render});
+
+var body;
+var circle;
+
+function preload() {
+
+    game.stage.backgroundColor = '#87ceeb';
+
+}
+
+function create() {
+
+
+    //creating body for the flag, which is a retabgle
+   body = new Phaser.Rectangle(0, 100, 800, 400);
+  //creating the circle
+   circle = new Phaser.Circle(game.world.centerX, 300,200);
+
+}
+
+
+function render () {
+    //giving the color for rectangle
+   game.debug.geom(body,'#008000');
+    //giving the color for circle
+  game.debug.geom(circle,'#ff0000');
+
+}
+
+
+</script>
+
+</body>
+</html>
